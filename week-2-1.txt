@@ -1,0 +1,43 @@
+class Car
+{
+    String color;
+    String model;
+    int year;
+    
+    Car(String color,String model,int year){
+        this.color=color;
+        this.model=model;
+        this.year=year;
+    }
+    
+    void display(){
+        System.out.println("Car model:" +model);
+        System.out.println("Car color:" +color);
+        System.out.println("Car year:" +year);
+    }
+    
+    void start(){
+        System.out.println(model+ "is starting");
+    }
+    
+    void stop(){
+        System.out.println(model+ "is stopping");
+    }
+}
+    
+    public class main{
+        public static void main(String[] args){
+            Car mycar=new Car("Red","Toyato",2022);
+            mycar.display();
+            mycar.start();
+            mycar.stop();
+        }
+    }
+        
+    
+    OUTPUT:
+Car model:Toyato
+Car color:Red
+Car year:2022
+Toyatois starting
+Toyatois stopping
