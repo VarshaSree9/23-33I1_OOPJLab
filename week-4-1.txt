@@ -1,0 +1,29 @@
+import java.io.*;
+import java.lang.*;
+import java.util.*;
+
+
+class One{
+  void java()
+   {
+     System.out.println("Java is an object programming language");
+   }
+ }
+
+ class Two extends One
+ {
+   void javaclass()
+    {
+      System.out.println("Java is an platform independent language");
+    }
+ }
+
+ public class SingleInheritance
+ {
+  public static void main(String[] args)
+  {
+   Two obj=new Two();
+   obj.java();
+   obj.javaclass();
+  }
+ }

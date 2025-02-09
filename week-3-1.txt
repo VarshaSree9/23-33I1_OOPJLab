@@ -1,0 +1,31 @@
+class Demo
+{
+Demo()
+{
+System.out.println("Empty constructor");
+}
+Demo(int a)
+{
+System.out.println("a value is:"+a);
+}
+Demo(int a,int b)
+{
+System.out.println("a value is:"+a+"b value is:"+b);
+}
+}
+class ConstructorOverloading
+{
+public static void main (String args[])
+{
+Demo ob1=new Demo();
+Demo ob2=new Demo(45);
+Demo ob3=new Demo(1,89);
+}
+}
+
+output:
+Empty constructor
+a value is:28
+a value is:11
+b value is:24
+

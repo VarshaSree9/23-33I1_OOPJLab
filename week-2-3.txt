@@ -1,0 +1,23 @@
+class Con
+{
+int i,j;
+Con()
+{
+i=28;
+j=11;
+}
+public void display()
+{
+System.out.println("value of i:"+i+"and j:"+j);
+}
+}
+public class Conditional{
+public static void main(String args[])
+{
+Con obj=new Con();
+obj.display();
+}
+}
+
+OUTPUT:
+value of i:28 and j:11

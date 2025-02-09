@@ -1,0 +1,69 @@
+import java.util.Scanner;
+
+public class QuadraticEquation {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        
+        System.out.print("Enter the coefficient b: ");
+        double b = scanner.nextDouble();
+        System.out.print("Enter the constant c: ");
+        double c = scanner.nextDouble();
+
+        
+        double a = 1;
+
+        
+        double d = b * b - 4 * a * c;
+
+        
+        System.out.println("Discriminant (d): " + d);
+
+        if (d > 0) {
+            
+            System.out.println("The roots are real and distinct.");
+            double sqrtD = manualSquareRoot(d);
+            double root1 = (-b + sqrtD) / (2 * a);
+            double root2 = (-b - sqrtD) / (2 * a);
+            System.out.println("Root 1: " + root1);
+            System.out.println("Root 2: " + root2);
+        } else if (d == 0) {
+            
+            System.out.println("The roots are real and equal.");
+            double root = -b / (2 * a);
+            System.out.println("Root: " + root);
+        } else {
+            
+            System.out.println("The roots are complex and imaginary.");
+            double realPart = -b / (2 * a);
+            double imaginaryPart = manualSquareRoot(-d) / (2 * a);
+            System.out.println("Root 1: " + realPart + " + " + imaginaryPart + "i");
+            System.out.println("Root 2: " + realPart + " - " + imaginaryPart + "i");
+        }
+
+        scanner.close();
+    }
+
+    
+    public static double manualSquareRoot(double number) {
+        if (number < 0) {
+            number = -number; 
+        }
+        double guess = number / 2;
+        double epsilon = 1e-6;
+
+        while (Math.abs(guess * guess - number) > epsilon) {
+            guess = (guess + number / guess) / 2;
+        }
+        return guess;
+    }
+}
+
+
+OUTPUT:
+Enter the coefficient b: 12
+Enter the constant c: 3
+Discriminant (d): 132.0
+The roots are real and distinct.
+Root 1: -0.255437351539765
+Root 2: -11.744562648460235
